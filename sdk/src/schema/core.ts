@@ -1,0 +1,43 @@
+import type { BackofficeActivity } from './activity.js';
+import type { BackofficeCollection } from './collection.js';
+import type { BackofficeComment } from './comment.js';
+import type { BackofficeDashboard } from './dashboard.js';
+import type { BackofficeExtension } from './extension.js';
+import type { BackofficeField } from './field.js';
+import type { BackofficeFile } from './file.js';
+import type { BackofficeFlow } from './flow.js';
+import type { BackofficeFolder } from './folder.js';
+import type { BackofficeNotification } from './notification.js';
+import type { BackofficeOperation } from './operation.js';
+import type { BackofficePanel } from './panel.js';
+import type { BackofficePermission } from './permission.js';
+import type { BackofficePreset } from './preset.js';
+import type { BackofficeRelation } from './relation.js';
+import type { BackofficeRole } from './role.js';
+import type { BackofficeSettings } from './settings.js';
+import type { BackofficeShare } from './share.js';
+import type { BackofficeUser } from './user.js';
+import type { BackofficeVersion } from './version.js';
+
+export interface CoreSchema<Schema = any> {
+	backoffice_activity: BackofficeActivity<Schema>[];
+	backoffice_collections: BackofficeCollection<Schema>[];
+	backoffice_comments: BackofficeComment<Schema>[];
+	backoffice_dashboards: BackofficeDashboard<Schema>[];
+	backoffice_extensions: BackofficeExtension<Schema>[];
+	backoffice_fields: BackofficeField<Schema>[];
+	backoffice_files: BackofficeFile<Schema>[];
+	backoffice_flows: BackofficeFlow<Schema>[];
+	backoffice_folders: BackofficeFolder<Schema>[];
+	backoffice_notifications: BackofficeNotification<Schema>[];
+	backoffice_operations: BackofficeOperation<Schema>[];
+	backoffice_panels: BackofficePanel<Schema>[];
+	backoffice_permissions: BackofficePermission<Schema>[];
+	backoffice_presets: BackofficePreset<Schema>[];
+	backoffice_relations: BackofficeRelation<Schema>[];
+	backoffice_roles: BackofficeRole<Schema>[];
+	backoffice_settings: BackofficeSettings<Schema>;
+	backoffice_shares: BackofficeShare<Schema>[];
+	backoffice_users: BackofficeUser<Schema>[];
+	backoffice_versions: BackofficeVersion<Schema>[];
+}

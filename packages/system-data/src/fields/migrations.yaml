@@ -1,0 +1,10 @@
+# backoffice_migrations isn't surfaced in the app, nor accessible from the API
+table: backoffice_migrations
+
+fields:
+  - collection: backoffice_migrations
+    field: version
+  - collection: backoffice_migrations
+    field: name
+  - collection: backoffice_migrations
+    field: timestamp

@@ -1,0 +1,43 @@
+{
+	"name": "@backoffice/sdk",
+	"version": "21.3.0",
+	"description": "Backoffice JavaScript SDK",
+	"homepage": "https://backoffice.io",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/backoffice/backoffice.git",
+		"directory": "sdk"
+	},
+	"funding": "https://github.com/backoffice/backoffice?sponsor=1",
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./package.json": "./package.json"
+	},
+	"main": "./dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "NODE_ENV=production tsdown",
+		"dev": "NODE_ENV=development tsdown",
+		"test": "vitest run --typecheck",
+		"test:coverage": "vitest run --coverage --typecheck"
+	},
+	"devDependencies": {
+		"@backoffice/system-data": "workspace:*",
+		"@directus/tsconfig": "catalog:",
+		"@vitest/coverage-v8": "catalog:",
+		"esbuild-plugin-replace": "catalog:",
+		"tsdown": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	},
+	"engines": {
+		"node": ">=22"
+	}
+}

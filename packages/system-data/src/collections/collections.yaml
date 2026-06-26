@@ -1,0 +1,123 @@
+table: backoffice_collections
+
+defaults:
+  collection: null
+  hidden: false
+  singleton: false
+  icon: null
+  note: null
+  translations: null
+  display_template: null
+  accountability: 'all'
+
+data:
+  - collection: backoffice_access
+    icon: admin_panel_settings
+    note: $t:backoffice_collection.backoffice_access
+    display_template: '{{ policy.name }}'
+    sort_field: sort
+
+  - collection: backoffice_activity
+    note: $t:backoffice_collection.backoffice_activity
+    accountability: null
+
+  - collection: backoffice_collections
+    icon: database
+    note: $t:backoffice_collection.backoffice_collections
+
+  - collection: backoffice_comments
+    note: $t:backoffice_collection.backoffice_comments
+
+  - collection: backoffice_fields
+    icon: input
+    note: $t:backoffice_collection.backoffice_fields
+
+  - collection: backoffice_files
+    icon: folder
+    note: $t:backoffice_collection.backoffice_files
+    display_template: '{{ $thumbnail }} {{ title }}'
+
+  - collection: backoffice_folders
+    note: $t:backoffice_collection.backoffice_folders
+    display_template: '{{ name }}'
+
+  - collection: backoffice_migrations
+    note: $t:backoffice_collection.backoffice_migrations
+
+  - collection: backoffice_permissions
+    icon: admin_panel_settings
+    note: $t:backoffice_collection.backoffice_permissions
+
+  - collection: backoffice_policies
+    icon: admin_panel_settings
+    note: $t:backoffice_collection.backoffice_policies
+
+  - collection: backoffice_presets
+    icon: bookmark
+    note: $t:backoffice_collection.backoffice_presets
+    accountability: null
+
+  - collection: backoffice_relations
+    icon: merge_type
+    note: $t:backoffice_collection.backoffice_relations
+
+  - collection: backoffice_revisions
+    note: $t:backoffice_collection.backoffice_revisions
+    accountability: null
+
+  - collection: backoffice_roles
+    icon: supervised_user_circle
+    note: $t:backoffice_collection.backoffice_roles
+
+  - collection: backoffice_sessions
+    note: $t:backoffice_collection.backoffice_sessions
+
+  - collection: backoffice_settings
+    singleton: true
+    note: $t:backoffice_collection.backoffice_settings
+
+  - collection: backoffice_users
+    archive_field: status
+    archive_value: archived
+    unarchive_value: draft
+    icon: people_alt
+    note: $t:backoffice_collection.backoffice_users
+    display_template: '{{ first_name }} {{ last_name }}'
+
+  - collection: backoffice_dashboards
+    note: $t:backoffice_collection.backoffice_dashboards
+
+  - collection: backoffice_panels
+    note: $t:backoffice_collection.backoffice_panels
+
+  - collection: backoffice_notifications
+    note: $t:backoffice_collection.backoffice_notifications
+
+  - collection: backoffice_shares
+    icon: share
+    note: $t:backoffice_collection.backoffice_shares
+
+  - collection: backoffice_flows
+    note: $t:backoffice_collection.backoffice_flows
+
+  - collection: backoffice_operations
+    note: $t:backoffice_collection.backoffice_operations
+
+  - collection: backoffice_translations
+    note: $t:backoffice_collection.backoffice_translations
+
+  - collection: backoffice_versions
+    note: $t:backoffice_collection.backoffice_versions
+
+  - collection: backoffice_extensions
+    note: $t:backoffice_collection.backoffice_extensions
+
+  - collection: backoffice_deployments
+    icon: cloud_upload
+    note: $t:backoffice_collection.backoffice_deployments
+
+  - collection: backoffice_deployment_projects
+    note: $t:backoffice_collection.backoffice_deployment_projects
+
+  - collection: backoffice_deployment_runs
+    note: $t:backoffice_collection.backoffice_deployment_runs

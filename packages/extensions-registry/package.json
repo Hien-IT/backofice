@@ -1,0 +1,44 @@
+{
+	"name": "@backoffice/extensions-registry",
+	"version": "3.0.26",
+	"description": "Abstraction for exploring Backoffice extensions on a package registry",
+	"homepage": "https://backoffice.io",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/backoffice/backoffice.git",
+		"directory": "packages/extensions-registry"
+	},
+	"funding": "https://github.com/backoffice/backoffice?sponsor=1",
+	"license": "MIT",
+	"author": "Rijk van Zanten <rijkvanzanten@me.com>",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js",
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsdown src/index.ts --dts",
+		"dev": "tsdown src/index.ts --dts --watch",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage"
+	},
+	"dependencies": {
+		"@backoffice/constants": "workspace:*",
+		"@backoffice/errors": "workspace:*",
+		"@backoffice/extensions": "workspace:*",
+		"ky": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@backoffice/types": "workspace:*",
+		"@directus/tsconfig": "catalog:",
+		"@vitest/coverage-v8": "catalog:",
+		"tsdown": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

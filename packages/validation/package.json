@@ -1,0 +1,42 @@
+{
+	"name": "@backoffice/validation",
+	"version": "2.0.23",
+	"type": "module",
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsdown src/index.ts --dts",
+		"dev": "tsdown src/index.ts --dts --watch",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage"
+	},
+	"description": "Utils to help with validation",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/backoffice/backoffice.git",
+		"directory": "packages/validation"
+	},
+	"funding": "https://github.com/backoffice/backoffice?sponsor=1",
+	"license": "MIT",
+	"author": "Rijk van Zanten <rijkvanzanten@me.com>",
+	"exports": {
+		".": "./dist/index.js",
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"devDependencies": {
+		"@directus/tsconfig": "catalog:",
+		"@backoffice/types": "workspace:*",
+		"@vitest/coverage-v8": "catalog:",
+		"tsdown": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	},
+	"dependencies": {
+		"@backoffice/errors": "workspace:*",
+		"@backoffice/utils": "workspace:*",
+		"joi": "catalog:"
+	}
+}

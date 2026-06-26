@@ -1,0 +1,37 @@
+{
+	"name": "e2e",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"test": "vitest --project sqlite",
+		"test:dev": "DEV=true vitest --project sqlite",
+		"test:all": "ALL=true vitest"
+	},
+	"keywords": [],
+	"author": "Nils Twelker (nils@backoffice.io)",
+	"type": "module",
+	"license": "MIT",
+	"packageManager": "pnpm@10.14.0",
+	"devDependencies": {
+		"@backoffice/sandbox": "workspace:*",
+		"@backoffice/sdk": "workspace:*",
+		"@directus/tsconfig": "catalog:",
+		"@backoffice/types": "workspace:*",
+		"@backoffice/utils": "workspace:*",
+		"@types/lodash-es": "catalog:",
+		"@types/node": "catalog:",
+		"async-mutex": "catalog:",
+		"chalk": "catalog:",
+		"commander": "catalog:",
+		"get-port": "catalog:",
+		"lodash-es": "catalog:",
+		"tsx": "catalog:",
+		"typescript": "catalog:",
+		"vite-tsconfig-paths": "catalog:",
+		"vitest": "catalog:"
+	},
+	"engines": {
+		"node": ">=22",
+		"pnpm": ">=10"
+	}
+}

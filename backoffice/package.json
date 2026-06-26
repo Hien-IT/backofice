@@ -1,0 +1,62 @@
+{
+	"name": "backoffice",
+	"version": "11.17.4",
+	"description": "Backoffice is a real-time API and App dashboard for managing SQL database content",
+	"keywords": [
+		"backoffice",
+		"realtime",
+		"database",
+		"content",
+		"api",
+		"rest",
+		"graphql",
+		"app",
+		"dashboard",
+		"headless",
+		"cms",
+		"mysql",
+		"postgresql",
+		"cockroachdb",
+		"sqlite",
+		"framework",
+		"vue"
+	],
+	"homepage": "https://backoffice.io",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/backoffice/backoffice.git"
+	},
+	"funding": "https://github.com/backoffice/backoffice?sponsor=1",
+	"license": "BUSL-1.1",
+	"author": {
+		"name": "Monospace Inc",
+		"email": "info@monospace.io",
+		"url": "https://monospace.io"
+	},
+	"maintainers": [
+		{
+			"name": "Rijk van Zanten",
+			"email": "rijkvanzanten@me.com",
+			"url": "https://github.com/rijkvanzanten"
+		},
+		{
+			"name": "Ben Haynes",
+			"email": "ben@rngr.org",
+			"url": "https://github.com/benhaynes"
+		}
+	],
+	"type": "module",
+	"exports": {
+		"./package.json": "./package.json",
+		"./version": "./version.js"
+	},
+	"bin": {
+		"backoffice": "cli.js"
+	},
+	"dependencies": {
+		"@backoffice/api": "workspace:*"
+	},
+	"engines": {
+		"node": ">=22"
+	}
+}

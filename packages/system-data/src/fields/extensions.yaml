@@ -1,0 +1,21 @@
+table: backoffice_extensions
+
+fields:
+  - collection: backoffice_extensions
+    field: id
+    special:
+      - uuid
+
+  - collection: backoffice_extensions
+    field: folder
+
+  - collection: backoffice_extensions
+    field: source
+
+  - collection: backoffice_extensions
+    field: bundle
+
+  - collection: backoffice_extensions
+    field: enabled
+    special:
+      - cast-boolean

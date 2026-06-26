@@ -1,0 +1,32 @@
+import { createBackoffice, createItem, rest, staticToken } from '@backoffice/sdk';
+import { database, port } from '@utils/constants.js';
+import { useSnapshot } from '@utils/use-snapshot.js';
+import { expect, test } from 'vitest';
+import type { Schema } from './schema.js';
+
+const api = createBackoffice<Schema>(`http://localhost:${port}`).with(rest()).with(staticToken('admin'));
+const { collections } = await useSnapshot<Schema>(api);
+
+for (const bool of [true, false]) {
+	test(`valid boolean ${bool}`, async () => {
+		const result = await api.request(
+			createItem(collections.fields, {
+				boolean: bool,
+			}),
+		);
+
+		expect(result.boolean).toBe(bool);
+	});
+}
+
+if (database !== 'sqlite') {
+	test(`invalid value for boolean`, async () => {
+		await expect(() =>
+			api.request(
+				createItem(collections.fields, {
+					boolean: 'test',
+				}),
+			),
+		).rejects.toThrowError();
+	});
+}
