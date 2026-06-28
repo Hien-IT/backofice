@@ -15,4 +15,4 @@ pnpm build
 
 # Chạy máy chủ phát triển Backoffice
 echo "Đang khởi chạy Backoffice Dev Server..."
-pnpm --filter @backoffice/api dev
+exec pnpm --filter @backoffice/api dev
