@@ -18,8 +18,21 @@ interface UseVisualEditingOptions {
  * sameOrigin validation against the currently displayed URL.
  */
 export function useVisualEditing({ previewUrl, isNew = false }: UseVisualEditingOptions) {
-	const visualModuleEnabled = computed(() => false);
-	const visualEditingEnabled = computed(() => false);
+	const settingsStore = useSettingsStore();
+	const moduleBar = computed(() => settingsStore.settings?.module_bar ?? MODULE_BAR_DEFAULT);
+
+	const visualModuleEnabled = computed(() =>
+		moduleBar.value.some((part) => part.type === 'module' && part.id === 'visual' && part.enabled),
+	);
+
+	const normalizedPreviewUrl = computed(() => normalizeUrl(unref(previewUrl)));
+
+	/**
+	 * Whether visual editing can be enabled in live preview.
+	 * This does NOT require the visual module to be enabled - only that VE-URLs are configured.
+	 * The visual module toggle only controls access to the full Visual Editor page.
+	 */
+	const visualEditingEnabled = computed(() => !!normalizedPreviewUrl.value && !unref(isNew));
 
 	return { visualEditingEnabled, visualModuleEnabled };
 }
