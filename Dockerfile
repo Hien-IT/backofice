@@ -2,10 +2,25 @@
 
 ARG NODE_VERSION=22
 
+# Các biến Build-arg để bật/tắt driver (Mặc định là true - cài đặt tất cả)
+ARG INSTALL_PG=true
+ARG INSTALL_MYSQL=true
+ARG INSTALL_MSSQL=true
+ARG INSTALL_ORACLE=true
+ARG INSTALL_SQLITE=true
+ARG INSTALL_REDIS=true
+
 ####################################################################################################
 ## Build Packages
 
 FROM node:${NODE_VERSION}-alpine AS builder
+
+ARG INSTALL_PG
+ARG INSTALL_MYSQL
+ARG INSTALL_MSSQL
+ARG INSTALL_ORACLE
+ARG INSTALL_SQLITE
+ARG INSTALL_REDIS
 
 # Remove again once corepack >= 0.31 made it into base image
 # (see https://github.com/backoffice/backoffice/issues/24514)
@@ -31,7 +46,27 @@ RUN pnpm fetch
 COPY --chown=node:node . .
 RUN <<EOF
 	set -ex
-	pnpm install --recursive --offline --frozen-lockfile
+	# Loại bỏ các database driver không dùng đến trước khi cài đặt dependencies
+	INSTALL_PG=${INSTALL_PG} \
+	INSTALL_MYSQL=${INSTALL_MYSQL} \
+	INSTALL_MSSQL=${INSTALL_MSSQL} \
+	INSTALL_ORACLE=${INSTALL_ORACLE} \
+	INSTALL_SQLITE=${INSTALL_SQLITE} \
+	INSTALL_REDIS=${INSTALL_REDIS} \
+	node -e '
+		const fs = require("fs");
+		const f = "api/package.json";
+		const pkg = JSON.parse(fs.readFileSync(f, "utf8"));
+		const opts = pkg.optionalDependencies || {};
+		if (process.env.INSTALL_PG !== "true") delete opts["pg"];
+		if (process.env.INSTALL_MYSQL !== "true") delete opts["mysql2"];
+		if (process.env.INSTALL_MSSQL !== "true") delete opts["tedious"];
+		if (process.env.INSTALL_ORACLE !== "true") delete opts["oracledb"];
+		if (process.env.INSTALL_SQLITE !== "true") delete opts["sqlite3"];
+		if (process.env.INSTALL_REDIS !== "true") delete opts["@keyv/redis"];
+		fs.writeFileSync(f, JSON.stringify(pkg, null, 2));
+	'
+	pnpm install --recursive --no-frozen-lockfile
 	npm_config_workspace_concurrency=2 pnpm run build
 	pnpm --filter backoffice deploy --legacy --prod dist
 	cd dist
