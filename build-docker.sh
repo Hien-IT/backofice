@@ -4,7 +4,7 @@
 set -e
 
 # Cấu hình mặc định
-IMAGE_NAME="backoffice"
+IMAGE_NAME="hiennd23/backoffice"
 DEFAULT_TAG="latest"
 
 # Lấy tag từ tham số truyền vào (nếu có), mặc định là "latest"
@@ -27,6 +27,9 @@ export DOCKER_BUILDKIT=1
 # Thực hiện build docker
 echo "📦 Đang thực thi: docker build --pull -t ${FULL_IMAGE_NAME} ."
 docker build --pull -t "${FULL_IMAGE_NAME}" .
+
+echo "📤 Đang push Docker Image"
+docker push "${FULL_IMAGE_NAME}"
 
 echo "=========================================================="
 echo "✅ Build Docker Image hoàn tất thành công!"
