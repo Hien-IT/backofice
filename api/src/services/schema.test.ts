@@ -96,7 +96,7 @@ describe('Services / Schema', () => {
 
 	describe('apply', () => {
 		const snapshotDiffWithHash = {
-			hash: '22da9fb6231a83de9405cdd4c313aa47967c3448',
+			hash: 'f173e863464eff0e46ce0b9b18898c4451f5b687',
 			diff: {
 				collections: [testCollectionDiff],
 				fields: [],

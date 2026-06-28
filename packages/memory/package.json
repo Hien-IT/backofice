@@ -35,7 +35,7 @@
 		"rate-limiter-flexible": "catalog:"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@types/node": "catalog:",
 		"@vitest/coverage-v8": "catalog:",
 		"tsdown": "catalog:",

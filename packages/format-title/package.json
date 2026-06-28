@@ -38,7 +38,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@vitest/coverage-v8": "catalog:",
 		"tsdown": "catalog:",
 		"typescript": "catalog:",

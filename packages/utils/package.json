@@ -44,7 +44,7 @@
 		"micromustache": "catalog:"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@backoffice/schema-builder": "workspace:*",
 		"@backoffice/types": "workspace:*",
 		"@backoffice/errors": "workspace:*",

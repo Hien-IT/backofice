@@ -28,7 +28,7 @@
 		"@vueuse/core": "catalog:"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"pinia": "catalog:",
 		"tsdown": "catalog:",
 		"typescript": "catalog:",

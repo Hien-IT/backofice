@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SplitPanel } from '@directus/vue-split-panel';
+import { SplitPanel } from '@backoffice/vue-split-panel';
 import { useBreakpoints, useResizeObserver, useScroll } from '@vueuse/core';
 import { computed, type ComputedRef, inject, provide, ref, unref, useTemplateRef, watch } from 'vue';
 import NotificationsGroup from '../../components/notifications-group.vue';

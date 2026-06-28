@@ -199,7 +199,7 @@
 	},
 	"devDependencies": {
 		"@backoffice/schema-builder": "workspace:*",
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@backoffice/types": "workspace:*",
 		"@ngneat/falso": "catalog:",
 		"@types/archiver": "catalog:",

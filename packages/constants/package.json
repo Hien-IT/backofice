@@ -26,7 +26,7 @@
 		"dev": "tsdown src/index.ts --dts --watch"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"tsdown": "catalog:",
 		"typescript": "catalog:"
 	}

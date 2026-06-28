@@ -35,7 +35,7 @@
 		"zod": "catalog:"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@types/deep-diff": "catalog:",
 		"knex": "catalog:",
 		"typescript": "catalog:",

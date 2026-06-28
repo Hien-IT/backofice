@@ -30,7 +30,7 @@
 	},
 	"devDependencies": {
 		"@backoffice/system-data": "workspace:*",
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@vitest/coverage-v8": "catalog:",
 		"esbuild-plugin-replace": "catalog:",
 		"tsdown": "catalog:",

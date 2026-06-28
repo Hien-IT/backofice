@@ -17,7 +17,7 @@ vi.mock('@backoffice/composables', async (importOriginal) => {
 	return { ...actual, useElementSize: vi.fn(() => ({ width: ref(0), height: ref(0) })) };
 });
 
-vi.mock('@directus/vue-split-panel', () => ({
+vi.mock('@backoffice/vue-split-panel', () => ({
 	SplitPanel: { template: '<div><slot name="start" /><slot name="end" /></div>' },
 }));
 

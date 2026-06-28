@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SplitPanel } from '@directus/vue-split-panel';
+import { SplitPanel } from '@backoffice/vue-split-panel';
 import { useBreakpoints } from '@vueuse/core';
 import { computed, watch } from 'vue';
 import ModuleBar from '../../components/module-bar.vue';

@@ -38,7 +38,7 @@
 		"knex": "catalog:"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"tsdown": "catalog:",
 		"typescript": "catalog:"
 	}

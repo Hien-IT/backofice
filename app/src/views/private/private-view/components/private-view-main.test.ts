@@ -23,7 +23,7 @@ vi.mock('@vueuse/core', async () => {
 
 vi.mock('@backoffice/utils/browser', () => ({ cssVar: vi.fn(() => '12') }));
 
-vi.mock('@directus/vue-split-panel', () => ({
+vi.mock('@backoffice/vue-split-panel', () => ({
 	SplitPanel: {
 		props: ['size', 'collapsed', 'disabled', 'direction'],
 		emits: ['update:size', 'update:collapsed'],

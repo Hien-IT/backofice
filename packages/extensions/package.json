@@ -41,7 +41,7 @@
 		"zod": "catalog:"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@types/fs-extra": "catalog:",
 		"@types/lodash-es": "catalog:",
 		"@types/node": "catalog:",

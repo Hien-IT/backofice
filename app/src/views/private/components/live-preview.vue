@@ -2,7 +2,7 @@
 import { useElementSize } from '@backoffice/composables';
 import type { ContentVersion } from '@backoffice/types';
 import { sameOrigin } from '@backoffice/utils/browser';
-import { SplitPanel } from '@directus/vue-split-panel';
+import { SplitPanel } from '@backoffice/vue-split-panel';
 import { computed, type CSSProperties, nextTick, onMounted, ref, useSlots, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';

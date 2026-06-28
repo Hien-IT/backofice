@@ -30,7 +30,7 @@
 		"test:coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
-		"@directus/tsconfig": "catalog:",
+		"@backoffice/tsconfig": "workspace:*",
 		"@vitest/coverage-v8": "catalog:",
 		"unplugin-yaml": "catalog:",
 		"esbuild": "catalog:",

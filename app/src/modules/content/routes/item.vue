@@ -2,7 +2,7 @@
 import { translateShortcut, useCollection, useShortcut } from '@backoffice/composables';
 import type { PrimaryKey } from '@backoffice/types';
 import { sameOrigin } from '@backoffice/utils/browser';
-import { SplitPanel } from '@directus/vue-split-panel';
+import { SplitPanel } from '@backoffice/vue-split-panel';
 import { useHead } from '@unhead/vue';
 import { useBreakpoints, useEventListener, useLocalStorage, useScroll } from '@vueuse/core';
 import { type ComponentPublicInstance, computed, onBeforeUnmount, provide, ref, toRefs, unref, watch } from 'vue';

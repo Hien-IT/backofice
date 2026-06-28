@@ -1,0 +1,10 @@
+{
+	"extends": "@backoffice/tsconfig/node22",
+	"compilerOptions": {
+		"ignoreDeprecations": "6.0",
+		"module": "NodeNext",
+		"resolveJsonModule": true,
+		"types": ["node"]
+	},
+	"include": ["src"]
+}

@@ -207,14 +207,14 @@ describe('Integration Tests', () => {
 							  },
 							  "Schema": {
 							    "properties": {
+							      "backoffice": {
+							        "type": "string",
+							      },
 							      "collections": {
 							        "items": {
 							          "$ref": "#/components/schemas/Collections",
 							        },
 							        "type": "array",
-							      },
-							      "backoffice": {
-							        "type": "string",
 							      },
 							      "fields": {
 							        "items": {
